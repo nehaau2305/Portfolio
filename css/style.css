@@ -4,7 +4,7 @@
   --text-color: rgb(0, 255, 255); /* main text, titles, important info */
   --secondary-text: rgb(255, 255, 255); /* captions, subtitles, etc */
   --primary-color: rgb(0, 255, 255); /* navbar, main items, buttons, glow? */
-  --accent-color: rgb(161, 158, 255); /* highlight, hover, borders, details */
+  --accent-color: rgb(255, 255, 0); /* highlight, hover, borders, details */
 }
 
 .darkmode{
@@ -84,28 +84,52 @@ nav {
   color: var(--secondary-text)
 }
 
+@keyframes slideInLeft {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
 .splash {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 90px; /* space in between text and image*/
-  margin: 100px;
-  padding-top: 30px;
+  margin: 190px 70px 90px 70px; /*order: top, right, bottom, left (clockwise)*/
 }
 
 .splash h1 {
   font-size: 85px;
   margin: 8px;
   color: var(--text-color);
+  animation: slideInLeft 3s ease forwards;
 }
 
 .splash p {
   font-size: 20px;
   padding-left: 20px;
+  animation: slideInLeft 3s ease forwards;
 }
 
 .splash img {
   border-radius: 50%;
+  animation: slideInRight 3s ease forwards;
 }
 
 .info {
@@ -160,10 +184,17 @@ nav {
 
 .card-layout {
   display: flex;
+  gap: 25px;
 }
 
 .card {
   padding: 30px;
+  box-shadow: 0 0 10px var(--primary-color);
+  border-radius: 10px;
+}
+
+.card:hover {
+  box-shadow: 0 0 10px var(--accent-color);
 }
 
 .contact {
@@ -183,7 +214,7 @@ nav {
   justify-content: center;
   align-items: center;
   padding: 20px;
-  box-shadow: 0 0 10px rgba(0, 255, 255, 0.623); /* horz offset, vert offset, blur radius*/
+  box-shadow: 0 0 10px var(--primary-color); /* horz offset, vert offset, blur radius*/
   border-radius: 12px;
   cursor: pointer;
   transition: transform 0.2s;
@@ -191,4 +222,5 @@ nav {
 
 .contact-card:hover {
   transform: translateY(-8px) scale(1.05);
+  box-shadow: 0 0 10px var(--accent-color);
 }
