@@ -1,0 +1,194 @@
+:root{
+  --base-color: rgb(0, 0, 0); /* background */
+  --base-variant: rgb(2, 0, 54); /* panels or cards */
+  --text-color: rgb(0, 255, 255); /* main text, titles, important info */
+  --secondary-text: rgb(255, 255, 255); /* captions, subtitles, etc */
+  --primary-color: rgb(0, 255, 255); /* navbar, main items, buttons, glow? */
+  --accent-color: rgb(161, 158, 255); /* highlight, hover, borders, details */
+}
+
+.darkmode{
+  --base-color: rgb(20, 20, 20);
+  --base-variant: rgb(40, 40, 40);
+  --text-color: rgb(235, 235, 220);
+  --secondary-text: rgb(235, 235, 220, 0.7);
+  --primary-color: rgb(0, 163, 0);
+  --accent-color: rgb(120, 200, 120);
+}
+
+.theme0{
+    --base-color: rgb(248, 248, 233); 
+  --base-variant: rgb(226, 233, 220); 
+  --text-color: rgb(20, 20, 20); 
+  --secondary-text: rgb(0, 0, 0, 0.6);
+  --primary-color: rgb(31, 61, 31);
+  --accent-color: rgb(0, 163, 0); 
+}
+
+.theme1{
+  --base-color: rgb(253, 253, 246);
+  --base-variant: rgb(251, 224, 142);
+  --text-color: rgb(13, 13, 107);
+  --secondary-text: rgb(23, 73, 160);
+  --primary-color: rgb(255, 18, 93);
+  --accent-color: rgb(99, 184, 227);
+}
+
+.theme2{
+  --base-color: rgb(235, 235, 235);
+  --base-variant: rgb(202, 177, 156);
+  --text-color: rgb(13, 13, 107);
+  --secondary-text: rgb(120, 100, 90);
+  --primary-color: rgb(94, 0, 30);
+  --accent-color: rgb(202, 177, 156);
+}
+
+/* end of theme colors */
+
+body {
+  background-color: var(--base-color);
+  font-family:Arial, Helvetica, sans-serif;
+  color: var(--secondary-text)
+}
+
+nav {
+  position: fixed; /* to make navbar always visible throughout page*/
+  /* position navbar correctly in its fixed position */
+  top: 0;
+  width: 100%;
+  margin: 0;
+  /* styling within navbar */
+  display: flex; 
+  justify-content: space-between; /* separates <p> and <ul> to ends of page */
+  background-color: var(--base-color);
+}
+
+/* use period for custom classes (ex. ".navlist{}" as opposed to "navlist{}" */
+.navlist {
+  display: flex;
+  list-style: none;
+  gap: 1rem;
+}
+
+.navlist a { 
+  text-decoration: none;
+  color: var(--secondary-text);
+  padding: 0.5rem 1rem;
+}
+
+.navlist a:hover { 
+  text-decoration: underline;
+}
+
+.navlist a:visited {
+  color: var(--secondary-text)
+}
+
+.splash {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 90px; /* space in between text and image*/
+  margin: 100px;
+  padding-top: 30px;
+}
+
+.splash h1 {
+  font-size: 85px;
+  margin: 8px;
+  color: var(--text-color);
+}
+
+.splash p {
+  font-size: 20px;
+  padding-left: 20px;
+}
+
+.splash img {
+  border-radius: 50%;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  align-items: center;
+  margin: 0 250px;
+}
+
+.about {
+  padding-top: 80px;
+}
+
+.about h4 {
+  margin: 0;
+  padding: 0;
+}
+
+.about p {
+  margin: 0;
+  padding: 0;
+}
+
+.work {
+  margin: 0;
+  padding: 0;
+  padding-top: 80px;
+}
+
+.work h5 {
+  margin: 0;
+  padding: 0;
+  font-size: 17px;
+}
+
+.work h6 {
+  margin: 0;
+  padding: 0;
+  font-size: 15px;
+  font-style: italic;
+}
+
+.work p {
+  margin: 0;
+  padding: 0;
+}
+
+.projects {
+  padding-top: 80px;
+}
+
+.card-layout {
+  display: flex;
+}
+
+.card {
+  padding: 30px;
+}
+
+.contact {
+  padding-top: 80px;
+  padding-bottom: 50px;
+}
+
+.contact-options {
+  display: flex;
+  justify-content: space-around;
+  gap: 60px;
+}
+
+.contact-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 255, 255, 0.623); /* horz offset, vert offset, blur radius*/
+  border-radius: 12px;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.contact-card:hover {
+  transform: translateY(-8px) scale(1.05);
+}

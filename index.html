@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nehaa Umapathy Portfolio</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+
+<body>
+    <nav>
+        <p>Nehaa Umapathy</p>
+        <ul id="navlist" class="navlist">
+            <li><a href="#splash">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#work">Work</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+    <section class="info">
+        <section id="splash" class="splash">
+            <div class="my-info">
+                <h1>Nehaa Umapathy</h1>
+                <p>Aspiring Web Developer</p>
+            </div>
+            <img src="images/headshot.jpg" width="200" height="200" alt="Headshot Image">
+        </section>
+        <section id="about" class="about">
+            <h2>About Me</h2>
+            <p>With experience in frontend and backend development, I strive to build applications to benefit
+                communities. I challenge myself to create solutions that are thoughtful,intuitive, and efficient.</p>
+            <br>
+            <h4>Education</h4>
+            <p>Computer Science major at the University of Georgia (Emphasis in Software Design)<br>Certificate in
+                Applied Data Science from the University of Georgia</p>
+            <br>
+            <h4>Skills</h4>
+            <p>Java, JavaScript, SQL, C, HTML, CSS, Python, Spring Boot, React.js<br>Github, MicroSoft Office, Linux,
+                MATLAB, JMP, MySQL, Postman, Figma</p>
+        </section> <!-- about me section -->
+        <section id="work" class="work">
+            <h2>Work Experience</h2>
+            <h5>Undergraduate Teaching Assistant</h5>
+            <h6>University of Georgia</h6>
+            <p>Graded 50+ weekly programming assignments in C on inter-process communication, providing detailed
+                feedback to each student regarding debugging code to help students improve their understanding and
+                address errors.</p>
+        </section> <!-- work exp section -->
+        <section id="projects" class="projects">
+            <h2>Projects</h2>
+            <section class="card-carousel">
+                <section class="card-layout">
+                    <div class="card">
+                        <h4> Cinema e-Booking Website </h4>
+                        <img src="images/finema.png" width="250" height="130" alt="Cinema Website Image">
+                        <ul>
+                            <li> Led a team of developers in an Agile setup to develop a full-stack application to allow
+                                users
+                                to book movie tickets. </li>
+                            <li> Designed the database architecture and implemented secure role-based user
+                                authentication
+                                using
+                                JSON Web Token. </li>
+                            <li> Implemented an AES-encrypted credit card storage system and profile management
+                                functionalities.
+                            </li>
+                            <li> Technologies: Java, Spring Boot, MySQL, HTML, CSS, React.js </li>
+                        </ul>
+                    </div>
+                    <div class="card">
+                        <h4> National Parks API Android App </h4>
+                        <img src="" width="250" height="130" alt="NPS Android App Image">
+                        <ul>
+                            <li> ~ </li>
+                            <li> ~ </li>
+                            <li> ~ </li>
+                            <li> Technologies: Java </li>
+                        </ul>
+                    </div>
+                    <div class="card">
+                        <h4> Banking Website </h4>
+                        <img src="images/banking.png" width="250" height="130" alt="Banking Website Image">
+                        <ul>
+                            <li> Collaborated with teammates to develop a full-stack web app for a banking system using
+                                Java,
+                                JavaScript, & CSS. </li>
+                            <li> Engineered the frontend and backend of profile management and transaction update
+                                functionalities. </li>
+                            <li> Contributed to profile update functionality as well as frontend design.</li>
+                            <li> Technologies: Java, Spring Boot, MySQL, HTML, CSS, React.js</li>
+                        </ul>
+                    </div>
+                </section> <!-- card layout section -->
+            </section> <!-- card carousel section -->
+        </section> <!-- projects section -->
+        <section id="contact" class="contact">
+            <h2>Contact Me Here</h2>
+            <section class="contact-options">
+                <div class="contact-card" onclick="copyEmail()">
+                    <i class="fa-solid fa-envelope"></i>
+                    <p>Email</p>
+                </div>
+                <div class="contact-card" onclick="openLink('https://www.linkedin.com/in/nehaa-umapathy')">
+                    <i class="fa-brands fa-linkedin"></i>
+                    <p>LinkedIn</p>
+                </div>
+                <div class="contact-card" onclick="openLink('https://github.com/nehaau2305')">
+                    <i class="fa-brands fa-github"></i>
+                    <p>GitHub</p>
+                </div>
+                <div class="contact-card" onclick="openLink('Nehaa_Umapathy_Resume.pdf')">
+                    <i class="fa-solid fa-file"></i>
+                    <p>Resume</p>
+                </div>
+            </section> <!-- contact options section -->
+        </section> <!-- contact me section -->
+    </section> <!-- info section -->
+</body>
+
+<!-- functions for contact me -->
+<script>
+    function copyEmail() {
+        const email = "nehaau2305@gmail.com";
+        navigator.clipboard.writeText(email).then(() => {
+            alert("Email copied to clipboard! Feel free to reach out!");
+        }).catch(err => {
+            console.error("Failed to copy email: ", err);
+        });
+    }
+
+    function openLink(url) {
+        window.open(url, "_blank");
+    }
+</script>
+
+</html>
