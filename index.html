@@ -7,6 +7,7 @@
     <title>Nehaa Umapathy Portfolio</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css">
 </head>
 
 <body>
@@ -20,104 +21,169 @@
             <li><a href="#contact">Contact</a></li>
         </ul>
     </nav>
-    <section class="info">
-        <section id="splash" class="splash">
-            <div class="my-info">
-                <h1>Nehaa Umapathy</h1>
-                <p>Aspiring Web Developer</p>
+    <section id="splash" class="splash">
+        <div class="my-info">
+            <h1>Nehaa Umapathy</h1>
+            <p>Aspiring Web Developer</p>
+        </div>
+        <img src="images/headshot.jpg" width="200" height="200" alt="Headshot Image">
+    </section>
+    <section id="about" class="about">
+        <h2>About Me</h2>
+        <p>With experience in frontend and backend development, I strive to build applications to benefit
+            communities. I challenge myself to create solutions that are thoughtful, intuitive, and efficient.</p>
+        <br>
+        <h4>Education</h4>
+        <p>Computer Science major at the University of Georgia (Emphasis in Software Design)<br>Certificate in
+            Applied Data Science from the University of Georgia</p>
+        <br>
+        <h4>Skills</h4>
+        <p>Java, JavaScript, SQL, C, HTML, CSS, Python, Spring Boot, React.js<br>Github, MicroSoft Office, Linux,
+            MATLAB, JMP, MySQL, Postman, Figma</p>
+    </section> <!-- about me section -->
+    <section id="work" class="work">
+        <h2>Work Experience</h2>
+        <h5>Undergraduate Teaching Assistant</h5>
+        <h6>University of Georgia</h6>
+        <p>Graded 50+ weekly programming assignments in C on inter-process communication, providing detailed
+            feedback to each student regarding debugging code to help students improve their understanding and
+            address errors.</p>
+    </section> <!-- work exp section -->
+    <section id="projects" class="projects">
+        <h2>Projects</h2>
+        <div class="swiper">
+            <div class="card-wrapper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <a href="https://github.com/nehaau2305/Finema" class="card-link">
+                            <div class="card">
+                                <h4> Cinema e-Booking Website </h4>
+                                <img src="images/finema.png" width="250" height="130" alt="Cinema Website Image">
+                                <ul>
+                                    <li> Led a team of developers in an Agile setup to develop a full-stack
+                                        application
+                                        to
+                                        allow
+                                        users
+                                        to book movie tickets. </li>
+                                    <li> Designed the database architecture and implemented secure role-based user
+                                        authentication
+                                        using
+                                        JSON Web Token. </li>
+                                    <li> Implemented an AES-encrypted credit card storage system and profile
+                                        management
+                                        functionalities.
+                                    </li>
+                                    <li> Technologies: Java, Spring Boot, MySQL, HTML, CSS, React.js </li>
+                                </ul>
+                            </div> <!--card-->
+                        </a>
+                    </div> <!--swiper-slide-->
+                    <div class="swiper-slide">
+                        <div class="card">
+                            <h4> Salamanders Android App </h4>
+                            <img src="images/banking.png" width="250" height="130" alt="Banking Website Image">
+                            <ul>
+                                <li> Android app that displays information about 7 salamander species in Georgia. </li>
+                                <li> Utilized fragments to make application compatible with portrait and landscape orientation. </li>
+                                <li> Contributed to profile update functionality as well as frontend design.</li>
+                                <li> Technologies: Java, Spring Boot, MySQL, HTML, CSS, React.js</li>
+                            </ul>
+                        </div> <!--card-->
+                    </div> <!--swiper-slide-->
+                    <div class="swiper-slide">
+                        <div class="card">
+                            <h4> Banking Website </h4>
+                            <img src="images/banking.png" width="250" height="130" alt="Banking Website Image">
+                            <ul>
+                                <li> Collaborated with teammates to develop a full-stack web app for a banking
+                                    system
+                                    using
+                                    Java,
+                                    JavaScript, & CSS. </li>
+                                <li> Engineered the frontend and backend of profile management and transaction
+                                    update
+                                    functionalities. </li>
+                                <li> Contributed to profile update functionality as well as frontend design.</li>
+                                <li> Technologies: Java, Spring Boot, MySQL, HTML, CSS, React.js</li>
+                            </ul>
+                        </div> <!--card-->
+                    </div> <!--swiper-slide-->
+                    <div class="swiper-slide">
+                        <div class="card">
+                            <h4> Android Bill Calculator </h4>
+                            <img src="images/billcalc.png" width="auto" height="130" alt="Bill Calculator Image">
+                            <ul>
+                                <li> Mobile Android application to calculate each diner's share of a bill. </li>
+                                <li> User enters bill total, number of diner, and desired tip. </li>
+                                <li> System outputs each diner's share. </li>
+                                <li> Technologies: Java </li>
+                            </ul>
+                        </div> <!--card-->
+                    </div> <!--swiper-slide-->
+                </div> <!-- swiper-wrapper section -->
+                <div class="swiper-pagination"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+            </div> <!-- card-wrapper -->
+        </div> <!-- swiper section -->
+    </section> <!-- projects section -->
+    <section id="contact" class="contact">
+        <h2>Contact Me Here</h2>
+        <dic class="contact-options">
+            <div class="contact-card" onclick="copyEmail()">
+                <i class="fa-solid fa-envelope"></i>
+                <p>Email</p>
             </div>
-            <img src="images/headshot.jpg" width="200" height="200" alt="Headshot Image">
-        </section>
-        <section id="about" class="about">
-            <h2>About Me</h2>
-            <p>With experience in frontend and backend development, I strive to build applications to benefit
-                communities. I challenge myself to create solutions that are thoughtful,intuitive, and efficient.</p>
-            <br>
-            <h4>Education</h4>
-            <p>Computer Science major at the University of Georgia (Emphasis in Software Design)<br>Certificate in
-                Applied Data Science from the University of Georgia</p>
-            <br>
-            <h4>Skills</h4>
-            <p>Java, JavaScript, SQL, C, HTML, CSS, Python, Spring Boot, React.js<br>Github, MicroSoft Office, Linux,
-                MATLAB, JMP, MySQL, Postman, Figma</p>
-        </section> <!-- about me section -->
-        <section id="work" class="work">
-            <h2>Work Experience</h2>
-            <h5>Undergraduate Teaching Assistant</h5>
-            <h6>University of Georgia</h6>
-            <p>Graded 50+ weekly programming assignments in C on inter-process communication, providing detailed
-                feedback to each student regarding debugging code to help students improve their understanding and
-                address errors.</p>
-        </section> <!-- work exp section -->
-        <section id="projects" class="projects">
-            <h2>Projects</h2>
-            <section class="card-carousel">
-                <section class="card-layout">
-                    <div class="card">
-                        <h4> Cinema e-Booking Website </h4>
-                        <img src="images/finema.png" width="250" height="130" alt="Cinema Website Image">
-                        <ul>
-                            <li> Led a team of developers in an Agile setup to develop a full-stack application to allow
-                                users
-                                to book movie tickets. </li>
-                            <li> Designed the database architecture and implemented secure role-based user
-                                authentication
-                                using
-                                JSON Web Token. </li>
-                            <li> Implemented an AES-encrypted credit card storage system and profile management
-                                functionalities.
-                            </li>
-                            <li> Technologies: Java, Spring Boot, MySQL, HTML, CSS, React.js </li>
-                        </ul>
-                    </div>
-                    <div class="card">
-                        <h4> Android Bill Calculator </h4>
-                        <img src="images/billcalc.png" width="auto" height="130" alt="Bill Calculator Image">
-                        <ul>
-                            <li> Mobile Android application to calculate each diner's share of a bill. </li>
-                            <li> User enters bill total, number of diner, and desired tip. </li>
-                            <li> System outputs each diner's share. </li>
-                            <li> Technologies: Java </li>
-                        </ul>
-                    </div>
-                    <div class="card">
-                        <h4> Banking Website </h4>
-                        <img src="images/banking.png" width="250" height="130" alt="Banking Website Image">
-                        <ul>
-                            <li> Collaborated with teammates to develop a full-stack web app for a banking system using
-                                Java,
-                                JavaScript, & CSS. </li>
-                            <li> Engineered the frontend and backend of profile management and transaction update
-                                functionalities. </li>
-                            <li> Contributed to profile update functionality as well as frontend design.</li>
-                            <li> Technologies: Java, Spring Boot, MySQL, HTML, CSS, React.js</li>
-                        </ul>
-                    </div>
-                </section> <!-- card layout section -->
-            </section> <!-- card carousel section -->
-        </section> <!-- projects section -->
-        <section id="contact" class="contact">
-            <h2>Contact Me Here</h2>
-            <section class="contact-options">
-                <div class="contact-card" onclick="copyEmail()">
-                    <i class="fa-solid fa-envelope"></i>
-                    <p>Email</p>
-                </div>
-                <div class="contact-card" onclick="openLink('https://www.linkedin.com/in/nehaa-umapathy')">
-                    <i class="fa-brands fa-linkedin"></i>
-                    <p>LinkedIn</p>
-                </div>
-                <div class="contact-card" onclick="openLink('https://github.com/nehaau2305')">
-                    <i class="fa-brands fa-github"></i>
-                    <p>GitHub</p>
-                </div>
-                <div class="contact-card" onclick="openLink('Nehaa_Umapathy_Resume.pdf')">
-                    <i class="fa-solid fa-file"></i>
-                    <p>Resume</p>
-                </div>
-            </section> <!-- contact options section -->
-        </section> <!-- contact me section -->
-    </section> <!-- info section -->
+            <div class="contact-card" onclick="openLink('https://www.linkedin.com/in/nehaa-umapathy')">
+                <i class="fa-brands fa-linkedin"></i>
+                <p>LinkedIn</p>
+            </div>
+            <div class="contact-card" onclick="openLink('https://github.com/nehaau2305')">
+                <i class="fa-brands fa-github"></i>
+                <p>GitHub</p>
+            </div>
+            <div class="contact-card" onclick="openLink('Nehaa_Umapathy_Resume.pdf')">
+                <i class="fa-solid fa-file"></i>
+                <p>Resume</p>
+            </div>
+            </div> <!-- contact options div -->
+    </section> <!-- contact me section -->
+
+    <!-- Swiper JS script for card carousel -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+    <script>
+        const swiper = new Swiper('.card-wrapper', {
+            spaceBetween: 20,
+            loop: true,
+            pagination: { el: '.swiper-pagination', clickable: true },
+            navigation: { nextEl: '.swiper-button-next', prevEl: '.swiper-button-prev' },
+            breakpoints: { 1024: { slidesPerView: 3 }, 768: { slidesPerView: 2 }, 480: { slidesPerView: 1 } }
+        });
+    </script>
+
+    <script>
+        const sections = document.querySelectorAll("section");
+        const navLinks = document.querySelectorAll("#navlist a");
+
+        window.addEventListener("scroll", () => {
+            let current = "";
+            sections.forEach((section) => {
+                const sectionTop = section.offsetTop - 100;
+                const sectionHeight = section.clientHeight;
+                if (pageYOffset >= sectionTop && pageYOffset < sectionTop + sectionHeight) {
+                    current = section.getAttribute("id");
+                }
+            });
+
+            navLinks.forEach((link) => {
+                link.classList.remove("active");
+                if (link.getAttribute("href") === "#" + current) {
+                    link.classList.add("active");
+                }
+            });
+        });
+    </script>
 </body>
 
 <!-- functions for contact me -->
@@ -135,5 +201,7 @@
         window.open(url, "_blank");
     }
 </script>
+
+
 
 </html>
