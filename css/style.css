@@ -81,7 +81,7 @@ nav {
 
 .navlist a { 
   text-decoration: none;
-  color: var(--text-color);
+  color: var(--secondary-text);
   padding: 0.5rem 1rem;
 }
 
@@ -94,7 +94,7 @@ nav {
 }
 
 .navlist a:visited {
-  color: var(--text-color)
+  color: var(--secondary-text)
 }
 
 @keyframes slideInLeft {
