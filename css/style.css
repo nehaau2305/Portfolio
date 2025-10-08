@@ -65,11 +65,14 @@ nav {
   /* position navbar correctly in its fixed position */
   top: 0;
   width: 100%;
+  height: 50px;
   margin: 0;
   /* styling within navbar */
   display: flex; 
   justify-content: space-between; /* separates <p> and <ul> to ends of page */
   background-color: var(--base-color);
+  /* z-index to make nav bar appear on top of all other features */
+  z-index: 1000;
 }
 
 /* use period for custom classes (ex. ".navlist{}" as opposed to "navlist{}" */
@@ -207,15 +210,14 @@ h2 {
   padding-top: 80px;
   display: flex;
   flex-direction: column;
-}
-
-.projects h2 {
-  margin-left: 150px;
+  text-align: left;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .projects .swiper {
   flex: 0 0 auto;
-  width: 100%;
+  width: 95%;
   height: 100%;
   margin: 0 auto;
   max-width: 1200px;
@@ -230,18 +232,33 @@ h2 {
   padding: 10px;
 }
 
+.card-wrapper .swiper-pagination-bullet {
+  height: 10px;
+  width: 10px;
+  opacity: 0.3;
+  background: var(--primary-color);
+}
+
+.card-wrapper .swiper-pagination-bullet-active {
+  opacity: 1;
+}
+
+.card-wrapper .swiper-slide-button {
+  color: var(--primary-color);
+}
+
 .card {
-  height: 450px;
-  width: 310px;
   padding: 30px;
-  box-shadow: 0 0 10px  var(--accent-color);
+  box-shadow: 0 0 5px  var(--text-color);
   border-radius: 10px;
   overflow: hidden;
   margin: 20px;
+  transition: transform 0.2s;
 }
 
 .card:hover {
-  box-shadow: 0 0 10px  var(--text-color);
+  box-shadow: 0 0 12px  var(--accent-color);
+  transform: scale(1.05);
 }
 
 .card-img {
