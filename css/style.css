@@ -243,8 +243,9 @@ h2 {
   opacity: 1;
 }
 
-.card-wrapper .swiper-slide-button {
+.swiper-button-prev, .swiper-button-next {
   color: var(--primary-color);
+  
 }
 
 .card {
