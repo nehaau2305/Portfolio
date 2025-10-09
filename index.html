@@ -55,7 +55,7 @@
             <div class="card-wrapper">
                 <div class="swiper-wrapper">
                     <div class="swiper-slide">
-                        <a href="https://github.com/nehaau2305/Finema" class="card-link">
+                        <a href="https://github.com/nehaau2305/Finema" target="_blank" class="card-link">
                             <div class="card">
                                 <h4> Cinema e-Booking Website </h4>
                                 <img src="images/finema.png" width="auto" height="100" alt="Cinema Website Image">
@@ -87,7 +87,8 @@
                         <div class="card">
                             <h4> Bill Calculator Android App</h4>
                             <img src="images/billcalc.png" width="auto" height="100" alt="Bill Calculator Image">
-                            <p> Mobile Android application that accepts the bill total, number of diners, & desired tip percentage as input to ouput each diner's share of a bill. </p>
+                            <p> Mobile Android application that accepts the bill total, number of diners, & desired tip
+                                percentage as input to ouput each diner's share of a bill. </p>
                             <p> Technologies: Java, XML </p>
                         </div> <!--card-->
                     </div> <!--swiper-slide-->
@@ -96,7 +97,7 @@
                 <div class="swiper-button-prev"></div>
                 <div class="swiper-button-next"></div>
             </div> <!-- card-wrapper -->
-        </div> <!-- swiper section -->
+        </div> <!-- swiper div -->
     </section> <!-- projects section -->
     <section id="contact" class="contact">
         <h2>Contact Me Here</h2>
@@ -105,14 +106,18 @@
                 <i class="fa-solid fa-envelope"></i>
                 <p>Email</p>
             </div>
-            <div class="contact-card" onclick="openLink('https://www.linkedin.com/in/nehaa-umapathy')">
-                <i class="fa-brands fa-linkedin"></i>
-                <p>LinkedIn</p>
-            </div>
-            <div class="contact-card" onclick="openLink('https://github.com/nehaau2305')">
-                <i class="fa-brands fa-github"></i>
-                <p>GitHub</p>
-            </div>
+            <a href="https://www.linkedin.com/in/nehaa-umapathy" target="_blank">
+                <div class="contact-card">
+                    <i class="fa-brands fa-linkedin"></i>
+                    <p>LinkedIn</p>
+                </div>
+            </a>
+            <a href="https://github.com/nehaau2305" target="_blank">
+                <div class="contact-card">
+                    <i class="fa-brands fa-github"></i>
+                    <p>GitHub</p>
+                </div>
+            </a>
             <div class="contact-card" onclick="openLink('Nehaa_Umapathy_Resume.pdf')">
                 <i class="fa-solid fa-file"></i>
                 <p>Resume</p>
@@ -124,7 +129,7 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
     <script>
         const swiper = new Swiper('.card-wrapper', {
-            spaceBetween: 20,
+            spaceBetween: 10,
             loop: true,
             pagination: { el: '.swiper-pagination', clickable: true },
             navigation: { nextEl: '.swiper-button-next', prevEl: '.swiper-button-prev' },
@@ -165,10 +170,6 @@
         }).catch(err => {
             console.error("Failed to copy email: ", err);
         });
-    }
-
-    function openLink(url) {
-        window.open(url, "_blank");
     }
 </script>
 
