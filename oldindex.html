@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nehaa Umapathy Portfolio</title>
+    <!-- <link rel="stylesheet" href="css/style.css"> -->
+     <link rel="stylesheet" href="newspaperstyle.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css">
+</head>
+
+<body>
+    <nav>
+        <p>Nehaa Umapathy</p>
+        <ul id="navlist" class="navlist">
+            <li><a href="#splash">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#work">Work</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+    <section id="splash" class="splash">
+        <div class="my-info">
+            <h1>Nehaa Umapathy</h1>
+            <p>Software Engineer</p>
+        </div>
+        <img src="images/headshot.jpg" width="200" height="200" alt="Headshot Image">
+    </section>
+    <section id="about" class="about">
+        <h2>About Me</h2>
+        <p>With experience in frontend and backend development, I strive to build applications to benefit
+            communities. I challenge myself to create solutions that are thoughtful, intuitive, and efficient.</p>
+        <br>
+        <h4>Education</h4>
+        <p>Computer Science major at the University of Georgia (Emphasis in Software Design)<br>Certificate in
+            Applied Data Science from the University of Georgia</p>
+        <br>
+        <h4>Skills</h4>
+        <p>Java, JavaScript, SQL, C, HTML, CSS, Python, XML, Spring Boot, React, Node.js <br>
+            Android Studio, MySQL, Github, MicroSoft Office, Linux, MATLAB, JMP, Postman, Figma</p>
+    </section> <!-- about me section -->
+    <section id="work" class="work">
+        <h2>Work Experience</h2>
+        <h5>Undergraduate Teaching Assistant</h5>
+        <h6>University of Georgia</h6>
+        <p>Graded 50+ weekly programming assignments in C on inter-process communication, providing detailed
+            feedback to each student regarding debugging code to help students improve their understanding and
+            address errors.</p>
+    </section> <!-- work exp section -->
+    <section id="projects" class="projects">
+        <h2>Projects</h2>
+        <div class="swiper">
+            <div class="card-wrapper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <a href="https://github.com/nehaau2305/Finema" target="_blank" class="card-link">
+                            <div class="card">
+                                <h4> Cinema e-Booking Website </h4>
+                                <img src="images/finema.png" width="auto" height="100" alt="Cinema Website Image">
+                                <p> Full stack application to book movie tickets with secure role-based authentication.
+                                </p>
+                                <p> Technologies: Java, Spring Boot, MySQL, HTML, CSS, React.js </p>
+                            </div> <!--card-->
+                        </a>
+                    </div> <!--swiper-slide-->
+                    <div class="swiper-slide">
+                        <a href="https://github.com/nehaau2305/SalamandersInGeorgia" target="_blank" class="card-link">
+                            <div class="card">
+                                <h4> Salamanders Android App </h4>
+                                <img src="images/salamander.png" width="auto" height="100" alt="Salamander App Image">
+                                <p> Android app that utilizes fragments to displays a list of 7 salamander species its
+                                    corresponding details appropriately in portrait & landscape orientation. </p>
+                                <p> Technologies: Java, XML </p>
+                            </div> <!--card-->
+                        </a>
+                    </div> <!--swiper-slide-->
+                    <div class="swiper-slide">
+                        <div class="card">
+                            <h4> Banking Website </h4>
+                            <img src="images/banking.png" width="auto" height="100" alt="Banking Website Image">
+                            <p> Full-stack web app for a banking system with profile management and transaction
+                                functionalities. </p>
+                            <p> Technologies: Java, Spring Boot, MySQL, HTML, CSS, React.js</p>
+                        </div> <!--card-->
+                    </div> <!--swiper-slide-->
+                    <div class="swiper-slide">
+                        <div class="card">
+                            <h4> Bill Calculator Android App</h4>
+                            <img src="images/billcalc.png" width="auto" height="100" alt="Bill Calculator Image">
+                            <p> Mobile Android application that accepts the bill total, number of diners, & desired tip
+                                percentage as input to ouput each diner's share of a bill. </p>
+                            <p> Technologies: Java, XML </p>
+                        </div> <!--card-->
+                    </div> <!--swiper-slide-->
+                </div> <!-- swiper-wrapper section -->
+                <div class="swiper-pagination"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+            </div> <!-- card-wrapper -->
+        </div> <!-- swiper div -->
+    </section> <!-- projects section -->
+    <section id="contact" class="contact">
+        <h2>Contact Me Here</h2>
+        <dic class="contact-options">
+            <div class="contact-card" onclick="copyEmail()">
+                <!-- i define the icon image to be used -->
+                <i class="fa-solid fa-envelope"></i>
+                <p>Email</p>
+            </div>
+            <a href="https://www.linkedin.com/in/nehaa-umapathy" target="_blank">
+                <div class="contact-card">
+                    <i class="fa-brands fa-linkedin"></i>
+                    <p>LinkedIn</p>
+                </div>
+            </a>
+            <a href="https://github.com/nehaau2305" target="_blank">
+                <div class="contact-card">
+                    <i class="fa-brands fa-github"></i>
+                    <p>GitHub</p>
+                </div>
+            </a>
+            <a href="Nehaa_Umapathy_Resume.pdf" target="_blank">
+                <div class="contact-card">
+                    <i class="fa-solid fa-file"></i>
+                    <p>Resume</p>
+                </div>
+            </a>
+            </div> <!-- contact options div -->
+    </section> <!-- contact me section -->
+
+    <!-- Swiper JS script for card carousel -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+    <script>
+        const swiper = new Swiper('.card-wrapper', {
+            spaceBetween: 10,
+            loop: true,
+            pagination: { el: '.swiper-pagination', clickable: true },
+            navigation: { nextEl: '.swiper-button-next', prevEl: '.swiper-button-prev' },
+            breakpoints: { 1024: { slidesPerView: 3 }, 768: { slidesPerView: 2 }, 480: { slidesPerView: 1 } }
+        });
+    </script>
+
+    <script>
+        const sections = document.querySelectorAll("section");
+        const navLinks = document.querySelectorAll("#navlist a");
+
+        window.addEventListener("scroll", () => {
+            let current = "";
+            sections.forEach((section) => {
+                const sectionTop = section.offsetTop - 100;
+                const sectionHeight = section.clientHeight;
+                if (pageYOffset >= sectionTop && pageYOffset < sectionTop + sectionHeight) {
+                    current = section.getAttribute("id");
+                }
+            });
+
+            navLinks.forEach((link) => {
+                link.classList.remove("active");
+                if (link.getAttribute("href") === "#" + current) {
+                    link.classList.add("active");
+                }
+            });
+        });
+    </script>
+</body>
+
+<!-- functions for contact me -->
+<script>
+    function copyEmail() {
+        const email = "nehaau2305@gmail.com";
+        navigator.clipboard.writeText(email).then(() => {
+            alert("Email copied to clipboard! Feel free to reach out!");
+        }).catch(err => {
+            console.error("Failed to copy email: ", err);
+        });
+    }
+</script>
+
+
+
+</html>

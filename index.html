@@ -8,46 +8,61 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css">
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=BBH+Sans+Bogle&family=Pirata+One&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Tinos:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+        rel="stylesheet">
 </head>
 
 <body>
+    <section id="splash" class="splash">
+        <h1>Nehaa Umapathy</h1>
+    </section>
     <nav>
-        <p>Nehaa Umapathy</p>
         <ul id="navlist" class="navlist">
-            <li><a href="#splash">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#work">Work</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#contact">Contact</a></li>
+            <li><a href="#splash">HOME</a></li>
+            <li><a href="#about">ABOUT</a></li>
+            <li><a href="#work">WORK</a></li>
+            <li><a href="#projects">PROJECTS</a></li>
+            <li><a href="#contact">CONTACT</a></li>
         </ul>
     </nav>
-    <section id="splash" class="splash">
-        <div class="my-info">
-            <h1>Nehaa Umapathy</h1>
-            <p>Software Engineer</p>
-        </div>
-        <img src="images/headshot.jpg" width="200" height="200" alt="Headshot Image">
-    </section>
+    <p class="tagline">B.S. &nbsp;in &nbsp;Computer &nbsp;Science &nbsp;& &nbsp;Certificate &nbsp;in &nbsp;Applied
+        &nbsp;Data &nbsp;Science &nbsp;| &nbsp;University &nbsp;of &nbsp;Georgia</p>
     <section id="about" class="about">
-        <h2>About Me</h2>
-        <p>With experience in frontend and backend development, I strive to build applications to benefit
-            communities. I challenge myself to create solutions that are thoughtful, intuitive, and efficient.</p>
-        <br>
-        <h4>Education</h4>
-        <p>Computer Science major at the University of Georgia (Emphasis in Software Design)<br>Certificate in
-            Applied Data Science from the University of Georgia</p>
-        <br>
-        <h4>Skills</h4>
-        <p>Java, JavaScript, SQL, C, HTML, CSS, Python, XML, Spring Boot, React, Node.js <br>
-            Android Studio, MySQL, Github, MicroSoft Office, Linux, MATLAB, JMP, Postman, Figma</p>
+        <img src="images/headshot.png" alt="Headshot Image">
+        <div class="about_text">
+            <h2>About Me</h2>
+            <p>With experience in both frontend and backend development, I strive to build applications to positively
+                benefit communities. Currently, I am focused on refining my web development skills and am concurrently
+                learning
+                Android mobile development. I'm committed to creating solutions that are thoughtfully designed &
+                efficient.</p>
+            <br>
+            <h4>Certificates</h4>
+            <p>Applied Data Science from the University of Georgia</p>
+            <br>
+            <h4>Skills</h4>
+            <p>Java, JavaScript, SQL, C, HTML, CSS, Python, XML, Spring Boot, React, Node.js <br>
+                Android Studio, MySQL, Github, MicroSoft Office, Linux, MATLAB, JMP, Postman, Figma</p>
+            <br>
+            <h4>Email</h4>
+            <div onclick="copyEmail()">
+                <p>nehaau2305@gmail.com</p>
+            </div>
+        </div> <!-- about me text div -->
     </section> <!-- about me section -->
     <section id="work" class="work">
         <h2>Work Experience</h2>
-        <h5>Undergraduate Teaching Assistant</h5>
-        <h6>University of Georgia</h6>
-        <p>Graded 50+ weekly programming assignments in C on inter-process communication, providing detailed
-            feedback to each student regarding debugging code to help students improve their understanding and
-            address errors.</p>
+        <div class="job">
+            <h5>Undergraduate Teaching Assistant - University of Georgia</h5>
+            <h6>January 2025 - May 2025</h6>
+            <p>Graded 50+ weekly programming assignments in C on inter-process communication, providing detailed
+                feedback to each student regarding debugging code to help students improve their understanding and
+                address errors.</p>
+        </div>
     </section> <!-- work exp section -->
     <section id="projects" class="projects">
         <h2>Projects</h2>
@@ -58,35 +73,54 @@
                         <a href="https://github.com/nehaau2305/Finema" target="_blank" class="card-link">
                             <div class="card">
                                 <h4> Cinema e-Booking Website </h4>
-                                <img src="images/finema.png" width="auto" height="100" alt="Cinema Website Image">
-                                <p> Full stack application to book movie tickets with secure role-based authentication.
+                                <img src="images/finema.png" alt="Cinema Website Image">
+                                <p>Served as team leader & worked with 3 other developers in an Agile environment to
+                                    develop a full stack application to book movie tickets by selecting a movie,
+                                    showtime, & seats. I
+                                    designed the database architecture, implemented secure role-based authentication,
+                                    encrpyted sensitive
+                                    information in the database, & more.
                                 </p>
-                                <p> Technologies: Java, Spring Boot, MySQL, HTML, CSS, React.js </p>
+                                <p>Technologies: Java, Spring Boot, MySQL, HTML, CSS, React.js</p>
+                            </div> <!--card-->
+                        </a>
+                    </div> <!--swiper-slide-->
+                    <div class="swiper-slide">
+                        <a href="https://github.com/nehaau2305/SalamandersInGeorgia" target="_blank" class="card-link">
+                            <div class="card">
+                                <h4> Salamanders Android App </h4>
+                                <img src="images/salamander.png" width="auto" height="170" alt="Salamander App Image">
+                                <p> Android app that demonstrates a Master Detail View by utilizing fragments to display
+                                    a list
+                                    of 7 salamander species in Georgia & its corresponding details. The app adapts the
+                                    view
+                                    appropriately in portrait & landscape orientation using fragments.
+                                </p>
+                                <p> Technologies: Java, XML, Android Studio </p>
+                            </div> <!--card-->
+                        </a>
+                    </div> <!--swiper-slide-->
+                    <div class="swiper-slide">
+                        <a href="https://github.com/ruthvik99/Banking-Application" target="_blank" class="card-link">
+                            <div class="card">
+                                <h4> Banking Website </h4>
+                                <img src="images/banking.png" alt="Banking Website Image">
+                                <p> Full-stack web app for a banking system designed used the Model-view-controller or
+                                    MVC design.
+                                    Secure role-based authentication allows users to login and see their banking
+                                    information
+                                    & admin users to create loans and credit cards. I implemented the backend for
+                                    profile management
+                                    & transaction functionalites.
+                                </p>
+                                <p> Technologies: Java, Spring Boot, MySQL, HTML, CSS, React.js, Postman</p>
                             </div> <!--card-->
                         </a>
                     </div> <!--swiper-slide-->
                     <div class="swiper-slide">
                         <div class="card">
-                            <h4> Salamanders Android App </h4>
-                            <img src="images/salamander.png" width="auto" height="100" alt="Salamander App Image">
-                            <p> Android app that utilizes fragments to displays a list of 7 salamander species its
-                                corresponding details appropriately in portrait & landscape orientation. </p>
-                            <p> Technologies: Java, XML </p>
-                        </div> <!--card-->
-                    </div> <!--swiper-slide-->
-                    <div class="swiper-slide">
-                        <div class="card">
-                            <h4> Banking Website </h4>
-                            <img src="images/banking.png" width="auto" height="100" alt="Banking Website Image">
-                            <p> Full-stack web app for a banking system with profile management and transaction
-                                functionalities. </p>
-                            <p> Technologies: Java, Spring Boot, MySQL, HTML, CSS, React.js</p>
-                        </div> <!--card-->
-                    </div> <!--swiper-slide-->
-                    <div class="swiper-slide">
-                        <div class="card">
                             <h4> Bill Calculator Android App</h4>
-                            <img src="images/billcalc.png" width="auto" height="100" alt="Bill Calculator Image">
+                            <img src="images/billcalc.png" width="auto" height="170" alt="Bill Calculator Image">
                             <p> Mobile Android application that accepts the bill total, number of diners, & desired tip
                                 percentage as input to ouput each diner's share of a bill. </p>
                             <p> Technologies: Java, XML </p>
@@ -175,7 +209,5 @@
         });
     }
 </script>
-
-
 
 </html>

@@ -1,0 +1,327 @@
+:root{
+  --base-color: rgb(0, 0, 0); /* background */
+  --base-variant: rgb(16, 16, 16); /* panels or cards */
+  --text-color: rgb(255, 255, 255); /* main text, titles, important info */
+  --secondary-text: rgb(0, 255, 255); /* captions, subtitles, etc */
+  --primary-color: rgb(0, 255, 255); /* navbar, main items, buttons, glow? */
+  --accent-color: blueviolet; /* highlight, hover, borders, details */
+}
+
+.other {
+  --base-color: rgb(0, 0, 0); /* background */
+  --base-variant: rgb(2, 0, 54); /* panels or cards */
+  --text-color: rgb(0, 255, 255); /* main text, titles, important info */
+  --secondary-text: rgb(255, 255, 255); /* captions, subtitles, etc */
+  --primary-color: rgb(0, 255, 255); /* navbar, main items, buttons, glow? */
+  --accent-color: rgb(255, 255, 0); /* highlight, hover, borders, details */
+}
+
+.darkmode{
+  --base-color: rgb(20, 20, 20);
+  --base-variant: rgb(40, 40, 40);
+  --text-color: rgb(235, 235, 220);
+  --secondary-text: rgb(235, 235, 220, 0.7);
+  --primary-color: rgb(0, 163, 0);
+  --accent-color: rgb(120, 200, 120);
+}
+
+.theme0{
+    --base-color: rgb(248, 248, 233); 
+  --base-variant: rgb(226, 233, 220); 
+  --text-color: rgb(20, 20, 20); 
+  --secondary-text: rgb(0, 0, 0, 0.6);
+  --primary-color: rgb(31, 61, 31);
+  --accent-color: rgb(0, 163, 0); 
+}
+
+.theme1{
+  --base-color: rgb(253, 253, 246);
+  --base-variant: rgb(251, 224, 142);
+  --text-color: rgb(13, 13, 107);
+  --secondary-text: rgb(23, 73, 160);
+  --primary-color: rgb(255, 18, 93);
+  --accent-color: rgb(99, 184, 227);
+}
+
+.theme2{
+  --base-color: rgb(235, 235, 235);
+  --base-variant: rgb(202, 177, 156);
+  --text-color: rgb(13, 13, 107);
+  --secondary-text: rgb(120, 100, 90);
+  --primary-color: rgb(94, 0, 30);
+  --accent-color: rgb(202, 177, 156);
+}
+
+/* end of theme colors */
+
+body {
+  background-color: var(--base-color);
+  font-family:Arial, Helvetica, sans-serif;
+  color: var(--text-color);
+}
+
+nav {
+  position: fixed; /* to make navbar always visible throughout page*/
+  /* position navbar correctly in its fixed position */
+  top: 0;
+  width: 100%;
+  height: 50px;
+  margin: 0;
+  /* styling within navbar */
+  display: flex; 
+  justify-content: space-between; /* separates <p> and <ul> to ends of page */
+  background-color: var(--base-color);
+  /* z-index to make nav bar appear on top of all other features */
+  z-index: 1000;
+}
+
+/* use period for custom classes (ex. ".navlist{}" as opposed to "navlist{}" */
+.navlist {
+  display: flex;
+  list-style: none;
+  gap: 1rem;
+}
+
+.navlist a { 
+  text-decoration: none;
+  color: var(--text-color);
+  padding: 0.5rem 1rem;
+}
+
+.navlist a.active {
+  color: var(--accent-color);
+}
+
+.navlist a:hover { 
+  text-decoration: underline;
+}
+
+.navlist a:visited {
+  color: var(--text-color)
+}
+
+@keyframes slideInLeft {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.splash {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 140px; /* space in between text and image*/
+  margin: 180px 130px 80px 130px; /*order: top, right, bottom, left (clockwise)*/
+}
+
+.splash h1 {
+  font-size: 120px;
+  margin: 8px;
+  color: rgb(255, 255, 255);
+  animation: slideInLeft 2.5s ease forwards;
+}
+
+.splash p {
+  font-size: 25px;
+  padding-left: 20px;
+  color: var(--accent-color);
+  animation: slideInLeft 3s ease forwards;
+}
+
+.splash img {
+  width: 400px;
+  height: 400px;
+  border-radius: 50%;
+  animation: slideInRight 2.5s ease forwards;
+}
+
+section {
+  display: flex;
+  justify-content: center;
+}
+
+.about {
+  padding-top: 80px;
+  flex-direction: column;
+  text-align: left;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+h2 {
+  color: var(--secondary-text);
+}
+
+
+.about h4 {
+  margin: 0;
+  padding: 0;
+  color: var(--accent-color);
+}
+
+.about p {
+  margin: 0;
+  padding: 0;
+}
+
+.work {
+  padding-top: 80px;
+  flex-direction: column;
+  text-align: left;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.work h5 {
+  margin: 0;
+  padding: 0;
+  font-size: 17px;
+}
+
+.work h6 {
+  margin: 0;
+  padding: 0;
+  font-size: 15px;
+  font-style: italic;
+}
+
+.work p {
+  margin: 0;
+  padding: 0;
+}
+
+.projects {
+  padding-top: 80px;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.projects .swiper {
+  position: relative;
+  flex: 0 0 auto;
+  width: 95%;
+  height: 100%;
+  margin: 0 auto;
+  max-width: 1200px;
+}
+
+
+.card-link {
+  text-decoration: none;
+  color:  var(--text-color);
+}
+
+.card-wrapper {
+  position: relative;
+  padding: 10px;
+  overflow: visible;
+}
+
+
+.card-wrapper .swiper-pagination-bullet {
+  height: 10px;
+  width: 10px;
+  opacity: 0.3;
+  background: var(--primary-color);
+}
+
+.card-wrapper .swiper-pagination-bullet-active {
+  opacity: 1;
+}
+
+.card-wrapper .swiper-button-prev, 
+.card-wrapper .swiper-button-next {
+  color: var(--primary-color);
+  width: 15px;
+  height: auto;
+  /* z-index for stacking order: high number = on top */
+  z-index: 10;
+  transition: transform 0.2s;
+}
+
+.card-wrapper .swiper-button-prev:hover, 
+.card-wrapper .swiper-button-next:hover {
+  transform: scale(1.09);
+}
+
+.card {
+  padding: 30px;
+  box-shadow: 0 0 5px  var(--accent-color);
+  background: var(--base-variant);
+  border-radius: 10px;
+  overflow: hidden;
+  margin: 20px;
+  transition: transform 0.2s;
+}
+
+.card:hover {
+  box-shadow: 0 0 20px  var(--accent-color);
+  transform: scale(1.05);
+}
+
+.card img {
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+.card-body {
+  padding: 15px;
+}
+
+.contact {
+  padding-top: 80px;
+  padding-bottom: 50px;
+  flex-direction: column;
+  text-align: left;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.contact-options {
+  display: flex;
+  gap: 60px;
+}
+
+.contact-options a {
+  text-decoration: none;
+  color: var(--text-color);
+}
+
+.contact-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: var(--base-variant);
+  box-shadow: 0 0 5px  var(--accent-color);
+  width: 100px;
+  height: 100px;  
+  padding: 20px 10px 0px 10px;  border-radius: 10px;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.contact-card:hover {
+  transform: translateY(-8px) scale(1.05);
+  box-shadow: 0 0 18px  var(--accent-color);
+}
