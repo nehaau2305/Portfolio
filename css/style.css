@@ -390,7 +390,7 @@ h2 {
   }
 
   .splash h1 {
-    font-size: 60px;
+    font-size: clamp(10px, 12vw, 75px);
     letter-spacing: 8px;
 }
 
@@ -417,5 +417,15 @@ h2 {
 
   .work {
     flex-direction: column;
+  }
+}
+@media (max-width: 570px) {
+  nav {
+    height: 40px;
+  }
+
+  .navlist {
+    padding: 0 8px;
+    font-size: 13px;
   }
 }
