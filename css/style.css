@@ -155,6 +155,10 @@ nav {
   color: var(--text-color)
 }
 
+#about, #work, #projects, #contact {
+  scroll-margin-top: 55px;
+}
+
 .tagline {
   font-size: clamp(7px, 5vw, 66px);
   width: fit-content;
