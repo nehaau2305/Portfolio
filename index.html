@@ -214,4 +214,16 @@
     }
 </script>
 
+<script>
+    document.querySelectorAll('a[href^="#"]').forEach(link => {
+        link.addEventListener('click', e => {
+            const target = document.querySelector(link.getAttribute('href'));
+            if (target) {
+                e.preventDefault();
+                target.scrollIntoView({block: "start", behavior: "smooth"});
+            }
+        })
+    })
+</script>
+
 </html>
