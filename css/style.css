@@ -267,6 +267,10 @@ h2 {
   animation: slideInRight 2.5s ease forwards;
 }
 
+.android-images {
+  display: flex;
+}
+
 .projects .swiper {
   position: relative;
   flex: 0 0 auto;
